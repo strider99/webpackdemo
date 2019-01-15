@@ -5,9 +5,10 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: './src/index.js',
   output : {
-    path: '',
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: path.resolve(__dirnname, 'dist')
+    chunkFile: '[id].js',
+    publicPath: ''
   },
   resolve: {
     extensions: ['.js', '.jsx']
